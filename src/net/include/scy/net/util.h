@@ -52,7 +52,7 @@ inline void getNetworkInterfaces(std::vector<net::Address>& hosts)
 //
 
 
-#if SCY_WIN
+#ifdef SCY_WIN
 #define nativeSocketFd(handle) ((handle)->socket)
 #else
 // uv__stream_fd taken from libuv unix/internal.h
