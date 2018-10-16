@@ -1,3 +1,15 @@
+I reverted back to Libsourcey 1.0.0 for "lubis-branch" branch. This fork work with following setup:
+ - Windows 10
+ - webrtc-17657-02ba69d-win-x64 downloaded from https://github.com/sourcey/webrtc-precompiled-builds/raw/master/webrtc-17657-02ba69d-win-x64.7z
+ - ffmpeg-4.0.2-win64 downloaded from https://ffmpeg.zeranoe.com/builds/win64/dev/ffmpeg-4.0.2-win64-dev.zip (dev files) and https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.0.2-win64-shared.zip (bin files)
+ - opencv (It should be any recent opencv3, but I used my own opencv that can be downloaded from http://vps198986.vps.ovh.ca/share/opencv-4.tar.gz. WARNING: CUDA 10 is needed!)
+ - openssl downloaded from https://slproweb.com/download/Win64OpenSSL-1_1_1.exe
+
+Change I make from original libsourcey repo:
+ - update the ffmpeg enumerator variables for latest FFMPEG setup (add AV_* in front of each variable)
+ - change preprocessor syntax (#if to #ifdef)
+
+
 # LibSourcey
 
 > C++ Networking Evolved
